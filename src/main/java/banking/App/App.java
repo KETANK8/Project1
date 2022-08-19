@@ -69,6 +69,7 @@ public class App
         							try {
         								// Checking if Balance is sufficient to Withdraw Amount.
         								if(bc.checkBal(bm)) {
+        									// Calling getToWithDraw method to Withdraw amount from account balance.
         									out.println("----------\nAccount Balance : "+bm.getToWithDraw());
         									bm.setAccBal(bm.getToWithDraw()); // Updating Account Balance
         								}
@@ -94,11 +95,12 @@ public class App
         							out.println("Enter Amount : ");
         							int amount = scan.nextInt();
         							bm.setAmount(amount); bm.getAmount();
+        									// Calling getToDeposit method to Deposit amount from account balance.
         									out.println("----------\nAccount Balance : "+bm.getToDeposit());
         									bm.setAccBal(bm.getToDeposit()); // Updating Account Balance
         							}
         						}
-        						// throwing exception if Amount is more than balance.
+        						// Throwing Exception if Password does'nt match.
         						catch(Exception e) {
         							out.println(e.getMessage());	
         						}
